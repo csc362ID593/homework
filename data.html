@@ -1,0 +1,100 @@
+<!-- Gabriel Levy -->
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+    .red {
+        color: white;
+        background-color: #e41a1c;
+    }
+    .redText {
+        color: #e41a1c;
+    }
+    .green {
+        color: white;
+        background-color: #4daf4a;
+    }
+    .greenText {
+        color: #4daf4a;
+    }
+    .blue {
+        color: white;
+        background-color: #377eb8;
+    }
+    .blueText {
+        color: #377eb8;
+    }
+    .purple {
+        color: white;
+        background-color: #984ea3;
+    }
+    .purpleText {
+        color: #984ea3;
+    }
+    .orange {
+        color: white;
+        background-color: #e69500;
+    }
+    .orangeText {
+        color: #e69500;
+    }
+  </style>
+
+  <script>
+
+    d3.select("#header")
+      .insert("h1")
+      .classed('red', true)
+      .text("Let's learn about data types!");
+    d3.select("#header")
+      .insert("text")
+      .classed('redText', true)
+      .text("The four data types are nominal, ordinal, interval, and ratio. This page will walk through the types and some examples of each of them.");
+
+    d3.select("#nominal")
+      .insert("h3")
+      .classed('blue', true)
+      .text("Nominal");
+    d3.select("#nominal")
+      .insert("text")
+      .classed('blueText', true)
+      .text("This data type refers to labels and names that cannot be compared mathematically. For example, the names of stores or numbers on sports jerseys would be nominal data types, as they both label the owner.");
+
+    d3.select("#ordinal")
+      .insert("h3")
+      .classed('green', true)
+      .text("Ordinal");
+    d3.select("#ordinal")
+      .insert("text")
+      .classed('greenText', true)
+      .text("The ordinal data type is used when objects can be compared as less than or greater than other objects. It is important to note, however, that the amount by which they differ cannot be determined. An example of an ordinal data type would be the star rating for products. These usually are between 1 and 5 stars. 5 stars is greater than 4 stars, but by how much, we do not know.");
+
+    d3.select("#interval")
+      .insert("h3")
+      .classed('purple', true)
+      .text("Interval");
+    d3.select("#interval")
+      .insert("text")
+      .classed('purpleText', true)
+      .text("Our third data type is the interval data type. This type represents data that can be compared quantitatively, but there is no true zero. A prime example of this would be the temperature scales of Fahrenheit and Celsius. 32 degrees is 5 degrees hotter than 27 degrees, so these numbers can be compared quantitatively. There exists negative degrees in both of these scales, so there is no true zero. Since no true zero exists, we do not have a sense of how large each number is, just how it compares to other numbers. Additionally, since there is no true zero, we cannot compare numbers as \"twice as large\" as another number.");
+
+    d3.select("#ratio")
+      .insert("h3")
+      .classed('orange', true)
+      .text("Ratio");
+    d3.select("#ratio")
+      .insert("text")
+      .classed('orangeText', true)
+      .text("The ratio data type is similar to the interval data type, but there exists a true zero. Let's look at an example. Consider the height scale. There exists a zero height. We also know that 4 feet is twice as tall as 2 feet. Thus, we can create a ratio. This is made possible by the true zero. ");
+
+
+  </script>
+
+</body>
